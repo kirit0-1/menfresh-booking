@@ -2,7 +2,7 @@
 
 Sistema de reservas web para **Barbería Menfresh** (Melipilla, Chile). Vanilla JS modular, sin frameworks.
 
-**Demo en vivo:** se publica automáticamente en GitHub Pages al hacer push a `main`.
+**Demo en vivo:** `https://kirit0-1.github.io/menfresh-booking/` (tras crear el repo y activar GitHub Pages).
 
 ## Estructura del proyecto
 
@@ -48,7 +48,9 @@ npm run dev
 
 1. Push a la rama `main`
 2. En el repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**
-3. La URL quedará en `https://<usuario>.github.io/menfresh-booking/`
+3. La URL quedará en `https://kirit0-1.github.io/menfresh-booking/`
+
+> Para un subdominio propio (ej. `reservas.tudominio.cl`): agrega un archivo `CNAME` en la raíz con el dominio y configura el DNS apuntando a `kirit0-1.github.io`.
 
 ### Vercel (alternativa)
 
