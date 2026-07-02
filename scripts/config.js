@@ -44,6 +44,9 @@ export const APP_CONFIG = {
     sendEmail: '/api/send-booking-email',
     scheduleReminder: '/api/schedule-reminder',
   },
+
+  /** URL pública tras deploy (GitHub Pages) */
+  publicUrl: 'https://kirit0-1.github.io/menfresh-booking',
 };
 
 export function isEmailConfigured() {

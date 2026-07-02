@@ -68,6 +68,7 @@ function goTo(step) {
   renderProgress(step > 5 ? 5 : step);
   updateSummary();
   updateWhatsAppFab(step);
+  updateMobileSummaryBar();
 
   const back = document.getElementById('btnBack');
   back.classList.toggle('hidden', step === 1 || step === 6);
@@ -79,6 +80,28 @@ function goTo(step) {
 
 function updateWhatsAppFab(step) {
   document.getElementById('whatsappFab').classList.toggle('hidden', step === 6);
+}
+
+function updateMobileSummaryBar() {
+  const bar = document.getElementById('mobileSummaryBar');
+  const step = state.currentStep;
+  const show = step >= 2 && step <= 5 && state.service;
+
+  if (!show) {
+    bar.classList.add('hidden');
+    return;
+  }
+
+  const parts = [state.service.name];
+  if (state.barber) parts.push(state.barber.name);
+  if (state.time) parts.push(state.time);
+  const price = formatPrice(state.service.price);
+
+  bar.classList.remove('hidden');
+  bar.innerHTML = `
+    <span class="mobile-summary-text">${escapeHtml(parts.join(' · '))}</span>
+    <span class="mobile-summary-price">${price}</span>
+  `;
 }
 
 // ── STEP 1: Servicios ─────────────────────────────────────────
@@ -406,6 +429,7 @@ function init() {
     renderProgress(1);
     updateSummary();
     updateWhatsAppFab(1);
+    updateMobileSummaryBar();
   }
 }
 
