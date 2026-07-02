@@ -7,7 +7,7 @@ set GITHUB_USER=kirit0-1
 
 git remote remove origin 2>nul
 git remote add origin https://github.com/%GITHUB_USER%/menfresh-booking.git
-git push -u origin main
+git -c user.name="kirit0-1" -c user.email="292630021+kirit0-1@users.noreply.github.com" push -u origin main
 
 echo.
 echo Listo. Activa GitHub Pages: Settings ^> Pages ^> Source: GitHub Actions

@@ -42,7 +42,7 @@ try {
 git remote remove origin 2>$null
 git remote add origin "https://github.com/$githubUser/$repoName.git"
 git branch -M main
-git push -u origin main
+git -c user.name="kirit0-1" -c user.email="292630021+kirit0-1@users.noreply.github.com" push -u origin main
 
 Write-Host "`nCodigo subido correctamente." -ForegroundColor Green
 
