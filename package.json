@@ -1,0 +1,12 @@
+{
+  "name": "menfresh-booking",
+  "version": "1.0.0",
+  "description": "Sistema de reservas web — Barbería Menfresh, Melipilla",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000"
+  },
+  "keywords": ["barberia", "reservas", "menfresh", "melipilla"],
+  "license": "UNLICENSED"
+}

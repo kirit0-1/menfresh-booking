@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+
+# Entorno local (nunca subir credenciales)
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# Builds
+dist/
+.cache/
